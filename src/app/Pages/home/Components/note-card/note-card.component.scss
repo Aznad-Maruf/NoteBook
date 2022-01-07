@@ -1,0 +1,76 @@
+:host::ng-deep{
+  .mat-card{
+    background: lightgoldenrodyellow;
+    color: darkslategray;
+
+    .mat-card-subtitle{
+      color: gray;
+      font-size: 10px;
+    }
+
+    .mat-card-actions{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}
+.note-card{
+  margin: 10px 0;
+  .heading-input{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .description-input{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  input[type=text]:disabled {
+    background: none;
+  }
+  .crateButton{
+    background: white;
+  }
+  .create-icon{
+    color: gray;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border-radius: 14px;
+    cursor: pointer;
+    &:hover{
+      background: white;
+    }
+  }
+  .delete-icon{
+    color: palevioletred;
+  }
+
+  .update-button{
+    border: none;
+    border-radius: 16px;
+    background: none;
+    color: gray;
+    padding: 0 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    cursor: pointer;
+    height: 24px;
+    &:hover{
+      background: white;
+    }
+  }
+
+  .mr-10{
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,23 @@
+.nav-bar-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: darkslategray;
+  padding: 15px 30px;
+  border-radius: 5px;
+
+  .search-input{
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+  }
+  .logo{
+    margin-top: auto;
+    margin-bottom: auto;
+    letter-spacing: 4px;
+    color: bisque;
+    font-family: "system-ui";
+  }
+}

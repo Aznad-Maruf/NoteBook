@@ -1,0 +1,25 @@
+<div class="home">
+  <mat-icon *ngIf="!addingNewNote" class="add-icon" (click)="onAddNewNote()">add</mat-icon>
+
+  <app-note-card
+    (OnAddClicked)="onAddClicked($event)"
+    (OnCancelClicked)="onCancelClicked()"
+
+    *ngIf="addingNewNote"
+    [note]="newNote"
+    [isEditing]="true"
+  >
+
+  </app-note-card>
+
+  <div *ngFor="let note of notes">
+    <app-note-card
+      [note]="note"
+      (OnUpdateClicked)="onUpdateClicked($event)"
+      (OnDeleteClicked)="onDeleteClicked($event)"
+    >
+
+    </app-note-card>
+  </div>
+
+</div>

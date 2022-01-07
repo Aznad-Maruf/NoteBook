@@ -1,0 +1,50 @@
+<mat-card class="note-card">
+  <mat-card-title>
+
+    <input
+      *ngIf="isEditing"
+      class="heading-input tw-text-red"
+      type="text"
+      [(ngModel)]="note.heading"
+      placeholder="Enter Heading ..."
+    >
+    <span *ngIf="!isEditing">{{note.heading}}</span>
+
+  </mat-card-title>
+  <mat-card-subtitle *ngIf="!isEditing">{{note.lastUpdateDateTime | date}}</mat-card-subtitle>
+  <mat-card-content>
+    <p *ngIf="!isEditing">{{note.description}}</p>
+    <textarea
+      *ngIf="isEditing"
+      class="description-input"
+      [(ngModel)]="note.description"
+      placeholder="Enter Note ..."
+    ></textarea>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-icon *ngIf="!isEditing" class="create-icon mr-10 delete-icon" (click)="onDeleteClick()">delete</mat-icon>
+    <mat-icon *ngIf="!isEditing" class="create-icon mr-10" (click)="onEditClick()">create</mat-icon>
+
+    <button *ngIf="note.id !== ''; else add"
+            class="update-button"
+            (click)="onUpdateClick()"
+    >
+      Update
+    </button>
+    <ng-template #add>
+      <button
+        class="update-button"
+        (click)="onCancelClick()"
+      >
+        Cancel
+      </button>
+      <button
+        class="update-button"
+        (click)="onAddClick()"
+      >
+        Add
+      </button>
+    </ng-template>
+
+  </mat-card-actions>
+</mat-card>
