@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  NoteUrl: 'http://localhost:5000/NoteBook/'
+  NoteUrl: 'http://khandakermaruf-001-site1.itempurl.com/NoteBook/'
 };
